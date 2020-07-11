@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: true
+  become: true
+  vars:
+    lexicon_additional_packages:
+      - python2-dns-lexicon+route53
+  roles:
+    - role: lexicon
